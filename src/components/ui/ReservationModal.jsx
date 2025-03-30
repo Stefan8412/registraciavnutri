@@ -43,25 +43,33 @@ export default function ReservationModal({ slot, close, updateTimeslots }) {
         <h2 className="text-xl font-bold">Rezervuj: {slot?.time}</h2>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="email"
           className="border p-2 w-full my-2"
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="text"
-          placeholder="Škola"
+          placeholder="názov školy"
           className="border p-2 w-full my-2"
           onChange={(e) => setOrganization(e.target.value)}
           required
         />
         <input
           type="number"
-          placeholder="Počet žiakov"
+          placeholder="počet žiakov-max.30"
           className="border p-2 w-full my-2"
           min="1"
-          max={slot.remaining}
-          onChange={(e) => setPeople(Number(e.target.value))}
+          // max={slot.remaining}
+          max="30"
+          onChange={(e) => {
+            let value = Number(e.target.value);
+            if (value > 30) {
+              value = 30; // Enforce max value
+            }
+            setPeople(value);
+            e.target.value = value; // Prevents visually displaying numbers over max
+          }}
           required
         />
         <button
