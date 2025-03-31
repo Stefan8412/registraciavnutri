@@ -50,7 +50,7 @@ export default function ReservationModal({ slot, close, updateTimeslots }) {
         />
         <input
           type="text"
-          placeholder="názov školy"
+          placeholder="názov školy-škôlky-organizácie"
           className="border p-2 w-full my-2"
           onChange={(e) => setOrganization(e.target.value)}
           required

@@ -5,6 +5,7 @@ import ReservationModal from "../components/ui/ReservationModal";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Menu, X } from "lucide-react";
+import CountdownTimer from "../components/Countdown";
 
 export default function Home() {
   const [timeslots, setTimeslots] = useState([]);
@@ -90,10 +91,11 @@ export default function Home() {
       </nav>
       <section
         id="hlasovanie-section"
-        className="min-h-screen flex flex-col items-center justify-center p-6 mt-4 bg-linear-to-r from-cyan-500 to-blue-500 "
+        className="min-h-screen flex flex-col items-center justify-center p-6 mt-4 pt-20 bg-linear-to-r from-blue-300 to-blue-500 z-10"
       >
-        <h1 className="text-2xl font-bold ">Termíny návštev</h1>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 ">
+        <h1 className="text-2xl font-bold ">Deň PSK</h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 w-full px-4">
           {timeslots.map((slot) => (
             <div key={slot.id} className="border p-4 rounded-lg mb-2">
               <p className="font-semibold">{slot.time}</p>
@@ -123,7 +125,7 @@ export default function Home() {
         <img
           src="/program.png" // Update with your actual image path
           alt="Event Cover"
-          className="w-full max-w-4xl h-auto object-cover rounded-lg shadow-lg
+          className="w-full max-w-4xl h-auto object-cover rounded-lg shadow-lg mt-10
                sm:max-w-3xl md:max-w-2xl lg:max-w-full"
         />
       </section>
