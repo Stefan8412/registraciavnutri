@@ -93,11 +93,11 @@ export default function Home() {
         id="hlasovanie-section"
         className="min-h-screen flex flex-col items-center justify-center p-6 mt-4 pt-20 bg-linear-to-r from-blue-300 to-blue-500 z-10"
       >
-        <h1 className="text-2xl font-bold ">Deň PSK</h1>
+        <h1 className="text-2xl font-bold ">Vnútri - Deň PSK</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 w-full px-4">
           {timeslots.map((slot) => (
-            <div key={slot.id} className="border p-4 rounded-lg mb-2">
+            <div key={slot.id} className="border p-4 rounded-lg mb-2 bg-white">
               <p className="font-semibold">{slot.time}</p>
               <p>Voľné miesta: {slot.remaining} / 180</p>
               <button
