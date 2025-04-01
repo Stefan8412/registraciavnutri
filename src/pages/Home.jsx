@@ -97,7 +97,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 w-full px-4">
           {timeslots.map((slot) => (
-            <div key={slot.id} className="border p-4 rounded-lg mb-2 bg-white">
+            <div key={slot.id} className="border p-4 rounded-lg mb-2 ">
               <p className="font-semibold">{slot.time}</p>
               <p>Voľné miesta: {slot.remaining} / 180</p>
               <button
