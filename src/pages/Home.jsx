@@ -5,7 +5,7 @@ import ReservationModal from "../components/ui/ReservationModal";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Menu, X } from "lucide-react";
-import CountdownTimer from "../components/Countdown";
+
 import QRCodeGenerator from "../components/QRCodegenerator";
 
 export default function Home() {
