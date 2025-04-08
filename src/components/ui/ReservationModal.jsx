@@ -5,7 +5,7 @@ import { db } from "../../firebaseConfig";
 export default function ReservationModal({ slot, close, updateTimeslots }) {
   const [email, setEmail] = useState("");
   const [organization, setOrganization] = useState("");
-  const [people, setPeople] = useState(1);
+  const [people, setPeople] = useState("");
   const [contact, setContact] = useState("");
   const [contactName, setContactName] = useState("");
   const [error, setError] = useState("");
